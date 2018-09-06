@@ -22,7 +22,7 @@ into the main directory (`cd Teamech-Embedded-Template`).
 4. The binary executable will be written to `Teamech-Server/target/release/teamech-embedded-template` 
 where it can be run or copied into a `bin/` directory to install it system-wide.  
   
-## Additional Setup
+### Additional Setup
 In order to work, both the Teamech server and client must use a large symmetric key file, referred
 to elsewhere as a pad file. In theory, any file will work as a pad file, but for optimal security,
 the pad file should be generated using a secure random number generator.  
@@ -43,3 +43,8 @@ I make absolutely no guaratees about the security of any Teamech network, no mat
 and key life cycle practices you adhere to. This software is a personal project to familiarize myself
 with cryptography, network programming, and version control, and you shouldn't trust it in any context.
 You probably shouldn't use it at all, but I can't stop you if you're determined.
+
+### Usage
+Once modified and built, the embedded client can be run in the same way as the desktop console client, e.g.  
+`./teamech-embedded-template [remote server:port] [optional local port] [path to pad file]`  
+The embedded client does not use ncurses and will only provide status and activity information to stdout.
